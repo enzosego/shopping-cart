@@ -1,0 +1,28 @@
+$image-map: (
+  sevenup: url('images/7up.png'),
+  pepsi: url('images/pepsi.png'),
+  lays: url('images/lays.png'),
+  cheetos: url('images/cheetos.png'),
+  coca: url('images/coca-cola.png'),
+  kitkat: url('images/kitkat.png'),
+  redbull: url('images/redbull.png'),
+  mnm: url('images/m&m.png'),
+  doritos: url('images/doritos.png'),
+  snickers: url('images/snickers.png'),
+  sprite: url('images/sprite.png'),
+  fanta: url('images/fanta.png'),
+);
+
+@mixin mapping-images() {
+  @each $number, $image in $image-map {
+    ##{$number} {
+      div {
+        background-image: $image;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100%;
+      }
+    }
+  }
+}
