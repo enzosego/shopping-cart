@@ -52,10 +52,10 @@ export const App = () => {
       <section className="App">
         <header>
           <nav>
-            <Link to="/">
+            <Link to="/shopping-cart">
               <h1> <Icon icon={faStore}/>Sn'ackies</h1>
             </Link>
-            <Link to="/cart">
+            <Link to="/shopping-cart/cart">
               <div className="cart-logo">
                 <h3>Cart</h3>
                 <Icon icon={faShoppingCart} style={{fontSize:"2rem"}}/>
@@ -65,18 +65,18 @@ export const App = () => {
           </nav>
         </header>
           <Switch>
-            <Route exact path="/" component={Homepage} />
-            <Route exact path="/shop">
+            <Route exact path="/shopping-cart/" component={Homepage} />
+            <Route exact path="/shopping-cart/shop">
               <Shop addingToCart={addingToCart} />
             </Route>
-            <Route exact path="/cart">
+            <Route exact path="/shopping-cart/cart">
               <Cart 
                 cartItems={cartItems}
                 decrementCount={decrementCount}
                 incrementCount={incrementCount}
                 total={total}/>
             </Route>
-            <Route exact path="/about" component={About} />
+            <Route exact path="/shopping-cart/about" component={About} />
           </Switch>
       </section>
     </BrowserRouter>

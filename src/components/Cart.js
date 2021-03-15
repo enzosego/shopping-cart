@@ -34,7 +34,7 @@ export const Cart = ({cartItems, decrementCount, incrementCount, total}) => {
 
   return(
     <section className="Cart">
-      <Link to="/shop">
+      <Link to="/shopping-cart/shop">
         <button className="back-to-shop">Keep shopping</button>
       </Link>
       {appendingToCart()}
